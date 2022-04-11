@@ -1,25 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import NavBar from "./components/NavBar/NavBar";
+import Presentation from "./components/Presentation/Presentation";
+import "bootstrap/dist/css/bootstrap.min.css";
+import Counter from "./components/Counter/Counter";
+import { useSelector } from "react-redux";
 
 function App() {
+  useSelector((state) => console.log(state.lang.lang));
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <NavBar />
+      <Presentation />
+      <Counter />
     </div>
   );
 }
+
+// <a href="https://www.flaticon.com/free-icons/spain" title="spain icons"> Icons created by Freepik - Flaticon </a>
 
 export default App;
