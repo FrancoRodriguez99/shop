@@ -17,7 +17,7 @@ function Counter() {
     <div id="Counter">
       {counter.map((element, index) => (
         <div key={index} className="data">
-          <div id="num${index}">{up(element[1], index)}</div>
+          <div id="num${index}">{element[1])}</div>
           <img src={icons[index]} className="icondata" alt="icons"></img>
           <div>{element[0]}</div>
         </div>
