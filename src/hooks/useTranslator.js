@@ -2,11 +2,11 @@ import english from "../constantes/english";
 import spanish from "../constantes/spanish";
 
 export function useTranslator(langstring = "EN") {
-  console.log("tu vieja", langstring);
   const language = langstring === "EN" ? english : spanish;
 
   const {
     lang,
+    otherLang,
     home,
     about,
     services,
@@ -17,9 +17,13 @@ export function useTranslator(langstring = "EN") {
     otherlanglogo,
     presCarrousel,
     counter,
+    abouts,
+    servicetext,
+    contacto,
   } = language;
   return {
     lang,
+    otherLang,
     home,
     about,
     services,
@@ -30,5 +34,8 @@ export function useTranslator(langstring = "EN") {
     otherlanglogo,
     presCarrousel,
     counter,
+    abouts,
+    servicetext,
+    contacto,
   };
 }

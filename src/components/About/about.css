@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap');
+
+#About{
+    padding-top: 65px;
+    padding-bottom: 65px;
+}
+
+#About p{
+    font-family: 'Ubuntu Mono', monospace;
+    color: white;
+    font-size: 34px;
+}
+
+#About h1{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: 'Ubuntu Mono', monospace;
+        color: white;
+    
+}
+
+#About span{
+    background-color: rgba(63, 49, 1, 0.301);
+}
+
+#About h2{
+    font-family: 'Ubuntu Mono', monospace;
+    text-align: center;
+    color: white;
+}
+
+#Aboutdata{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 30px;
+    
+
+}
+
+#aboutvideo{
+    width: 800px;
+    height: 500px;
+}
+
+.listabout{
+    list-style: none;
+    padding: 0;
+    
+}
+
+#aboutlist{
+    padding: 0;
+}
+
+.usdata{
+   text-align: center;
+   padding-bottom: 5px;
+   border-color: violet;
+    border-bottom-style: solid;
+    color: yellow !important;
+}
+
+.usdata:hover{
+    font-size: 50px !important;
+ }
+ 
+

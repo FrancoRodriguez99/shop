@@ -5,20 +5,22 @@ import s from "../../assets/s.ico";
 import hc from "../../assets/hc.ico";
 import { useSelector } from "react-redux";
 import "./Counter.css";
+import CountUp from "react-countup";
 
-const icons = [hc, pb, s, ny];
-
-function up(endValue, index) {}
+const icons = [ny, pb, hc, s];
 
 function Counter() {
-  const langstring = useSelector((state) => state.lang.lang);
-  const { counter } = useTranslator(langstring);
+  const langstring = useSelector((state) => state.lang);
+  const { counter } = useTranslator(langstring.lang);
+
   return (
     <div id="Counter">
       {counter.map((element, index) => (
-        <div key={index} className="data">
-          <div id="num${index}">{up(element[1], index)}</div>
-          <img src={icons[index]} className="icondata" alt="icons"></img>
+        <div key={"countup" + index} className="data">
+          <div id={"number" + index}>
+            <CountUp end={element[1]} duration={6 + index * 2} />
+          </div>
+          <img src={icons[index]} className="icondatacounter" alt="icons"></img>
           <div>{element[0]}</div>
         </div>
       ))}

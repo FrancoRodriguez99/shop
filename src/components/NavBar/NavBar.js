@@ -10,6 +10,7 @@ function NavBar() {
   const dispatch = useDispatch();
   const {
     lang,
+    otherLang,
     home,
     about,
     services,
@@ -24,31 +25,31 @@ function NavBar() {
       <div id="NavBar">
         <img src={image} alt="Company Logo" id="logo"></img>
         <ul id="NavBarOptions">
-          <NavOption text={home} />
-          <NavOption text={about} />
-          <NavOption text={services} />
-          <NavOption text={contact_us} />
-          <NavOption text={shop} />
+          <NavOption text={home} link="/#Home" />
+          <NavOption text={about} link="/#About" />
+          <NavOption text={services} link="/#Services" />
+          <NavOption text={contact_us} link="/Contacto" />
+          <NavOption text={shop} link="/Shop" />
         </ul>
-        <div id="dropdownbox">
-          <div className="dropdown">
-            <button className="dropbtn">
-              <img src={langlogo} id="lanlogo" alt="logo of the language"></img>
-              {lang}
-            </button>
-            <div className="dropdown-content">
-              <button
-                className="dropbtn"
-                onClick={() => dispatch(switchLang())}
-              >
-                <img
-                  src={otherlanglogo}
-                  id="lanlogo"
-                  alt="logo of the second language"
-                ></img>
-              </button>
-            </div>
-          </div>
+
+        <div id="langOptions" className="lang-box">
+          <button id="currentlang" className="langbtn">
+            <img src={langlogo} id="lanlogo" alt="logo of the language"></img>
+            {lang}
+          </button>
+
+          <button
+            id="dropdown-content"
+            onClick={() => dispatch(switchLang())}
+            className="langbtn"
+          >
+            <img
+              src={otherlanglogo}
+              id="lanlogo"
+              alt="logo of the second language"
+            ></img>
+            {otherLang}
+          </button>
         </div>
       </div>
     </div>

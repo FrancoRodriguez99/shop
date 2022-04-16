@@ -1,0 +1,85 @@
+#Services{
+    background-image: linear-gradient(to right,rgb(56, 72, 140), rgb(98, 124, 241));;
+    padding-bottom: 35px;
+    padding-top: 65px;
+}
+
+.icondata{
+    height: 30px;
+    width: 30px;
+}
+#title{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-bottom: 55px;
+    color: white;
+}
+
+#box-services{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+
+#services-list{
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+
+.gridtemp{
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+
+
+.servicebox{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-style: outset;
+    text-align: center;
+    height: 250px;
+    width: 300px;
+    margin-left: 40px;
+    margin-bottom: 20px;
+    background-color: blueviolet;
+    border-color: yellow;
+    border-width: 6px;
+    
+}
+
+.Description{
+    display: none;
+    color:white
+}
+
+.servicebox:hover .icondata{
+    display: none;
+    }
+
+    .servicebox:hover .Description{
+        display: block;
+    }
+    .servicebox:hover .tocontac{
+        display: block;
+    }
+
+    
+
+.tocontac{
+    display:none;
+}

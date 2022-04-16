@@ -9,12 +9,16 @@
   
   }
   
-  #carrousel{
+  #Home{
     height: 70vh;
     width: 100%;
   }
   
-  #carrousel img{
+ .textbox{
+background-color: rgb(0, 0, 0);
+}
+
+  #Home img{
     height: 70vh;
     border-top: 10px;
     border-bottom: 10px;
@@ -24,15 +28,13 @@
     border-color: rgb(206, 189, 36);
   }
   
-  #carrousel p{
-   background-color: black;
+  #Home p{
    font-family: 'Bebas Neue', cursive;
   }
-  #carrousel h3{
-    background-color: black;
+  #Home h3{
     font-family: 'Bebas Neue', cursive;
    }
-   #carrousel button{
+   #Home button{
     background-color: black;
    }
   

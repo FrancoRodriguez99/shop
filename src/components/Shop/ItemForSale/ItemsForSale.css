@@ -1,0 +1,33 @@
+.productforsale{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 90%;
+    border-style: outset;
+    margin: 5px;
+    margin-top: 2em;
+    justify-self: center;
+    border-color: cyan;
+    background: rgba(0,251,255,0.30996148459383754);}
+
+
+img{
+    width: 50%;
+    height: 50%;
+}
+
+.displayonhover{display: none;}
+
+.productforsale:hover .displayonhover{
+ display: block;
+}
+
+.productforsale:hover .productimg{
+    display: none;
+   }
+
+.productforsale:hover {
+    background-color: rgb(140, 255, 255);
+   }

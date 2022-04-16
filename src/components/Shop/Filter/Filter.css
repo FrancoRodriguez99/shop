@@ -1,0 +1,19 @@
+#filter{
+    width: 20%;
+    background: rgb(245,21,35);
+    background: linear-gradient(90deg, rgb(247, 27, 82) 25%, rgb(109, 4, 4) 100%);
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    justify-content: space-around;
+    font-size: 2em;
+    height: 93vh;
+    position: fixed;
+    margin-top: 7vh;
+    z-index: -1;
+}
+
+.divisor{
+    border-style: solid;
+    border-color: cyan;
+}
