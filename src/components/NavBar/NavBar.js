@@ -25,11 +25,11 @@ function NavBar() {
       <div id="NavBar">
         <img src={image} alt="Company Logo" id="logo"></img>
         <ul id="NavBarOptions">
-          <NavOption text={home} link="/#Home" />
-          <NavOption text={about} link="/#About" />
-          <NavOption text={services} link="/#Services" />
-          <NavOption text={contact_us} link="/Contacto" />
-          <NavOption text={shop} link="/Shop" />
+          <NavOption text={home} link="/ecommerceweb" />
+          <NavOption text={about} link="/ecommerceweb" />
+          <NavOption text={services} link="/ecommerceweb" />
+          <NavOption text={contact_us} link="/contacto" />
+          <NavOption text={shop} link="/shop" />
         </ul>
 
         <div id="langOptions" className="lang-box">
