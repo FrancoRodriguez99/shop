@@ -16,11 +16,17 @@ function Counter() {
   return (
     <div id="Counter">
       {counter.map((element, index) => (
+<<<<<<< HEAD
         <div key={"countup" + index} className="data">
           <div id={"number" + index}>
             <CountUp end={element[1]} duration={6 + index * 2} />
           </div>
           <img src={icons[index]} className="icondatacounter" alt="icons"></img>
+=======
+        <div key={index} className="data">
+          <div>{element[1]}</div>
+          <img src={icons[index]} className="icondata" alt="icons"></img>
+>>>>>>> d0c7df09c5a93d7737f813a2839c6090d5d7e527
           <div>{element[0]}</div>
         </div>
       ))}
