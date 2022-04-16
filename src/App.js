@@ -14,6 +14,10 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 function App() {
   return (
     <Router className="App">
+      <div>
+        <NavBar />
+        <Contacto />
+      </div>
       <Routes>
         <Route
           path="/"

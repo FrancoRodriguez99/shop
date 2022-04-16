@@ -4,6 +4,11 @@ function Footer() {
     <div id="Footer">
       <div>
         Developed by Franco Rodriguez to show skills at React,Redux,JavaScript
+        {"   "}
+        <a href="https://www.flaticon.com/free-icons/spain" title="spain icons">
+          {" "}
+          Icons created by Freepik - Flaticon{" "}
+        </a>
       </div>
       <div>
         More info/contact at:
