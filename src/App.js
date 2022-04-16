@@ -16,7 +16,10 @@ function App() {
     <Router className="App">
       <div>
         <NavBar />
-        <Contacto />
+        <Presentation />
+        <Counter />
+        <About />
+        <Services />
       </div>
       <Routes>
         <Route
