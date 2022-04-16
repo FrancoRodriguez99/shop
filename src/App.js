@@ -15,8 +15,8 @@ function App() {
   return (
     <Router className="App">
       <div>
-        <ShopNavBar />
-        <Shop />
+        <NavBar />
+        <Contacto />
       </div>
       <Routes>
         <Route
