@@ -28,7 +28,7 @@ function NavBar() {
           <NavOption text={home} link="/ecommerceweb" />
           <NavOption text={about} link="/ecommerceweb" />
           <NavOption text={services} link="/ecommerceweb" />
-          <NavOption text={contact_us} link="/contacto" />
+          <NavOption text={contact_us} link="/Contacto" />
           <NavOption text={shop} link="/shop" />
         </ul>
 
