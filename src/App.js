@@ -38,15 +38,6 @@ function App() {
             </div>
           }
         />
-        <Route
-          path="/shop"
-          element={
-            <div>
-              <ShopNavBar />
-              <Shop />
-            </div>
-          }
-        />
       </Routes>
       <Footer />
     </Router>
