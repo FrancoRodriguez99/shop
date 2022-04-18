@@ -17,6 +17,8 @@ function App() {
       <ShopNavBar />
       <Shop />
       <Routes>
+        <ShopNavBar />
+        <Shop />
         <Route
           path="/"
           element={
