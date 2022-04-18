@@ -1,6 +1,12 @@
 import "./ShopNavBar.css";
+import CartShop from "../CartShop/";
 import image from "../../../assets/logoshop.png";
+
+import shopcart from "../../../assets/shopcart.png";
+import { useSelector } from "react-redux";
+
 function ShopNavBar() {
+  const cart = useSelector((state) => state.cartshop);
   return (
     <div id="shopnavbarbox">
       <div id="shopnavbar">
@@ -11,7 +17,11 @@ function ShopNavBar() {
           <input id="searchbar" placeholder="Buscar"></input>
         </div>
         <div id="user">
-          login/register o carrito y mi cuenta si esta logueado
+          <button id="cartbtn">
+            <img src={shopcart} alt="shopcart" id="cartimg"></img>
+            <div id="itemsincarshop">{cart.id.length}</div>
+          </button>
+          <CartShop />
         </div>
       </div>
     </div>

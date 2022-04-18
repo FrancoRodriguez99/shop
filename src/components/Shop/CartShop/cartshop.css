@@ -1,0 +1,69 @@
+
+
+.insideshopcart{
+    display: none;
+    background-color: rgb(247, 72, 72);
+    margin-top: 40vh;
+    margin-right: 30vh;
+    max-height: 200vh;
+    width: 70vh;
+    max-width: 70vh;
+    padding: 5vh;
+    z-index: 10;
+}
+
+#carttitle{
+    display: flex;
+    justify-content: space-around;
+}
+
+
+
+#elementslist{
+    overflow-y:scroll;
+    max-height: 40vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: left;
+}
+
+.items-in-car-shop{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    border-bottom-style: solid;
+    border-color: cyan;
+    border-width: 1px;
+    
+    
+}
+
+.img-cart-item{
+    max-width: 10vh;
+    max-height: 7;
+}
+
+#barra{
+    background-color: cyan;
+}
+
+#total{
+    border-top-style: solid;
+    border-color: cyan;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    text-align: center;
+}
+
+#conf-purch{
+    width: 40%;
+}
+
+
+#wdiv{
+    max-width: 30%;
+    min-width: 30%;
+}

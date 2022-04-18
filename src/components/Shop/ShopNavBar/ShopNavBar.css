@@ -38,6 +38,8 @@
     border-width: 0.2em;
     border-style: solid;
     text-align: center;
+    resize: none;
+    outline: none;
 }
 
 #user{
@@ -48,4 +50,32 @@
     height: 100%;
     background-color: rgb(245, 52, 46)
     
+}
+
+#cartbtn{
+    width: 50%;
+    height: 100%;
+    background-color: transparent;
+    border-style: none;
+}
+
+#cartimg{
+    width: 100%;
+    height: 100%;
+}
+
+
+#cartbtn:focus + .insideshopcart{
+    display: block !important;
+    position: absolute }
+
+.insideshopcart:hover{
+    display: block;
+    position: absolute;
+}
+
+#itemsincarshop{
+    background-color: cyan;
+    border-radius: 50%;
+    padding: 0;
 }

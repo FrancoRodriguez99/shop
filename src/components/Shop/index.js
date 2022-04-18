@@ -19,13 +19,13 @@ function Shop() {
     categorias: ["Indumentaria", "Mujer", "Calzado", "Zapatos", "Prada"],
   };
   const producto2 = {
-    id: "0",
+    id: "1",
     name: "Coca-Cola sin Azucar",
     description:
       "Gaseosa sin Azucar de Coca-Cola, En tamaños 500ml 1.5L 2.5L y 3L",
     img: [image2],
     tags: "gaseosa,bebible,sin azucar,500ml,1.5L,2.5L,3L",
-    precio: 150,
+    precio: [100, 150, 190, 250, 300],
     tamanio: ["500ml", "1Litro", "1.5Litros", "2.5Litros", "3 Litros"],
     cantidad: [3, 2, 0, 1, 5],
     categorias: [
@@ -38,14 +38,14 @@ function Shop() {
     ],
   };
   const producto3 = {
-    id: "0",
+    id: "2",
     name: "Alfa Romero 0km",
     description:
       "Vehiculo automotor Alfa Romeo, ni idea que marca pero esta facherazo",
     img: [image3],
     tags: "vehiculos,nuevo,0km,rojo,4puertas",
     precio: 3500000,
-    tamanio: ["unico"],
+    tamanio: ["one"],
     cantidad: [15],
     categorias: ["Vehiculos", "Nuevo", "Auto", "4 Puertas", "Afla Romeo"],
   };
@@ -56,21 +56,18 @@ function Shop() {
         <ItemForSale product={producto} />
         <ItemForSale product={producto2} />
         <ItemForSale product={producto3} />
-        <ItemForSale product={producto2} />
-        <ItemForSale product={producto2} />
-        <ItemForSale product={producto3} />
-        <ItemForSale product={producto2} />
         <ItemForSale product={producto} />
-        <ItemForSale product={producto} />
-        <ItemForSale product={producto3} />
-        <ItemForSale product={producto2} />
-        <ItemForSale product={producto} />
-        <ItemForSale product={producto2} />
         <ItemForSale product={producto2} />
         <ItemForSale product={producto3} />
         <ItemForSale product={producto} />
         <ItemForSale product={producto2} />
+        <ItemForSale product={producto3} />
         <ItemForSale product={producto} />
+        <ItemForSale product={producto2} />
+        <ItemForSale product={producto3} />
+        <ItemForSale product={producto} />
+        <ItemForSale product={producto2} />
+        <ItemForSale product={producto3} />
       </div>
     </div>
   );

@@ -59,14 +59,12 @@
     justify-content: center;
   }
 
-  #currentlang:hover #dropdown-content{
-    display: block;
-  }
-
   #langOptions:hover .langbtn{
     display: block;
 
   }
+ 
+
 
   .langbtn{
     background-color:rgb(98, 124, 241);

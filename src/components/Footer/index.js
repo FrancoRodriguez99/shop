@@ -2,7 +2,7 @@ import "./Footer.css";
 function Footer() {
   return (
     <div id="Footer">
-      <div>
+      <div id="footer-data">
         Developed by Franco Rodriguez to show skills at React,Redux,JavaScript
         {"   "}
         <a href="https://www.flaticon.com/free-icons/spain" title="spain icons">
