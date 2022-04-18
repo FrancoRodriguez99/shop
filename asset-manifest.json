@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/FrancoRodriguez99/shop/static/css/main.928279d5.css",
-    "main.js": "/FrancoRodriguez99/shop/static/js/main.0bae31e2.js",
+    "main.js": "/FrancoRodriguez99/shop/static/js/main.1ba476e7.js",
     "static/media/contact.png": "/FrancoRodriguez99/shop/static/media/contact.66fdd55e182d728d54d2.png",
     "static/media/objetomuestra3.png": "/FrancoRodriguez99/shop/static/media/objetomuestra3.54e4c5fab8d975d10ed2.png",
     "static/media/pw.png": "/FrancoRodriguez99/shop/static/media/pw.6c49dfd2e357d7ef663e.png",
@@ -29,10 +29,10 @@
     "static/media/manufac.ico": "/FrancoRodriguez99/shop/static/media/manufac.6796ebc2f51ed87df631.ico",
     "index.html": "/FrancoRodriguez99/shop/index.html",
     "main.928279d5.css.map": "/FrancoRodriguez99/shop/static/css/main.928279d5.css.map",
-    "main.0bae31e2.js.map": "/FrancoRodriguez99/shop/static/js/main.0bae31e2.js.map"
+    "main.1ba476e7.js.map": "/FrancoRodriguez99/shop/static/js/main.1ba476e7.js.map"
   },
   "entrypoints": [
     "static/css/main.928279d5.css",
-    "static/js/main.0bae31e2.js"
+    "static/js/main.1ba476e7.js"
   ]
 }
