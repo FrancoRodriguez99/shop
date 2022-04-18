@@ -17,8 +17,6 @@ function App() {
       <ShopNavBar />
       <Shop />
       <Routes>
-        <ShopNavBar />
-        <Shop />
         <Route
           path="/"
           element={
@@ -40,6 +38,7 @@ function App() {
             </div>
           }
         />
+        <Route path="/shop" element={<div></div>} />
       </Routes>
       <Footer />
     </Router>
