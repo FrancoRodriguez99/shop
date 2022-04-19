@@ -18,8 +18,10 @@ function ShopNavBar() {
         </div>
         <div id="user">
           <button id="cartbtn">
-            <img src={shopcart} alt="shopcart" id="cartimg"></img>
-            <div id="itemsincarshop">{cart.id.length}</div>
+            <div id="cartimg-box">
+              <img src={shopcart} alt="shopcart" id="cartimg"></img>
+              <p id="itemsincarshop">{cart.id.length}</p>
+            </div>
           </button>
           <CartShop />
         </div>

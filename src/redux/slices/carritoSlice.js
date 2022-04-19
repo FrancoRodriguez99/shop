@@ -2,7 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 
 export const carritoSlice = createSlice({
   name: "cartshop",
-  initialState: { id: [], items: [], quantity: [], tamanio: [] },
+  initialState: { id: [], items: [], quantity: [], tamanio: [], total: [0] },
   reducers: {
     additem: (state, action) => {
       state.id.push(state.id.length);
@@ -46,7 +46,7 @@ export const carritoSlice = createSlice({
       state.items = state.items
         .slice(0, action.payload)
         .concat(state.items.slice(action.payload + 1, state.items.length));
-      state.quantity = state.items
+      state.quantity = state.quantity
         .slice(0, action.payload)
         .concat(
           state.quantity.slice(action.payload + 1, state.quantity.length)
@@ -58,6 +58,9 @@ export const carritoSlice = createSlice({
         .slice(0, action.payload)
         .concat(state.id.slice(action.payload + 1, state.id.length));
     },
+    changetotal: (state, action) => {
+      state.total = action.payload;
+    },
   },
 });
 
@@ -68,6 +71,7 @@ export const {
   addorremove,
   changesize,
   cutitem,
+  changetotal,
 } = carritoSlice.actions;
 export default carritoSlice.reducer;
 

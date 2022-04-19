@@ -5,12 +5,13 @@ import {
   addorremove,
   changesize,
   cutitem,
+  changetotal,
 } from "../../../redux/slices/carritoSlice";
 import "./cartshop.css";
 
 function CartShop() {
+  let total = [0];
   const cart = useSelector((state) => state.cartshop);
-  console.table(cart);
   const dispatch = useDispatch();
   const add = "add";
   const rmv = "rmv";
@@ -27,53 +28,105 @@ function CartShop() {
   };
   function precioporcantidad(element, index) {
     if (Array.isArray(element.precio)) {
-      total += element.precio[cart.tamanio[index]] * cart.quantity[index];
-      return (
-        <div>
-          {element.precio[cart.tamanio[index]] * cart.quantity[index]} Total
-        </div>
-      );
+      if (cart.tamanio[index] !== undefined) {
+        total[index] =
+          element.precio[cart.tamanio[index]] * cart.quantity[index];
+        return (
+          <div>
+            {element.precio[cart.tamanio[index]] * cart.quantity[index]} Total
+          </div>
+        );
+      } else {
+        return <div>Por favor elige un tamaño!</div>;
+      }
     } else {
-      total += element.precio * cart.quantity[index];
+      total[index] = element.precio * cart.quantity[index];
       return <div>{element.precio * cart.quantity[index]} Total</div>;
     }
   }
 
   function precioporunidad(element, index) {
     if (Array.isArray(element.precio)) {
-      return <div>{element.precio[cart.tamanio[index]]} C/U</div>;
+      if (cart.tamanio[index] !== undefined) {
+        return <div>{element.precio[cart.tamanio[index]]} C/U</div>;
+      } else {
+        return <div>Por favor, elige un tamaño!</div>;
+      }
     } else {
       return <div>{element.precio} C/U</div>;
     }
   }
 
-  let total = 0;
+  function calculatetotal() {
+    if ([...cart.total].toString() !== [...total].toString()) {
+      dispatch(changetotal(total));
+    }
+    let totaldos = 0;
+    total.forEach((element) => {
+      return (totaldos += element);
+    });
+
+    return totaldos;
+  }
+
+  function buy() {
+    //if size choose render button if not render a alert
+
+    let hbtn = true;
+    cart.tamanio.forEach((element) => {
+      if (element === undefined || element === "Por favor elige un tamaño.") {
+        hbtn = false;
+      }
+      return null;
+    });
+
+    if (hbtn === true) {
+      return (
+        <button id="conf-purch" className="button-85" onClick={() => null}>
+          Comprar
+        </button>
+      );
+    } else {
+      return <div>Por favor, elige un tamaño para los artículos en azul.</div>;
+    }
+  }
+
   return (
     <div className="insideshopcart">
       <div id="carttitle">
-        Carrito de Compras
-        <button onClick={() => dispatch(deleteall())}>Borrar Todo</button>
+        <p id="titlecart">Carrito de Compras</p>
+        <button onClick={() => dispatch(deleteall())} id="removeall">
+          Borrar Todo
+        </button>
       </div>
       <div id="elementslist">
         {cart.items.map((element, index) => {
           return (
             <div key={index} className="items-in-car-shop">
-              <img
-                src={element.img[0]}
-                alt="imagen item"
-                className="img-cart-item"
-              ></img>
+              <div id="imgbox">
+                <img
+                  src={element.img[0]}
+                  alt="imagen item"
+                  className="img-cart-item"
+                ></img>
+              </div>
 
               <div id="wdiv">
                 {element.name}
                 {element.tamanio.length > 1 ? (
                   <select
                     selected="Pelase Pick a Size"
-                    className="pleasepickasize"
+                    className={
+                      cart.tamanio[index] === undefined ||
+                      cart.tamanio[index] === "Por favor elige un tamaño."
+                        ? "pleasepickasize"
+                        : null
+                    }
                     onChange={(event) => sizevalue(event, index)}
                   >
-                    <option value="Pelase Pick a Size">
-                      Please pick a Size
+                    {console.log(cart.tamanio[index])}
+                    <option value="Por favor elige un tamaño.">
+                      Por favor elige un tamaño.
                     </option>
                     {element.tamanio.map((size, sindex) => {
                       return (
@@ -85,10 +138,14 @@ function CartShop() {
                   </select>
                 ) : null}
               </div>
-              <div>
-                <button onClick={() => dispatch(addorremove([rmv, index]))}>
+              <div id="quantitybox">
+                <button
+                  onClick={() => dispatch(addorremove([rmv, index]))}
+                  className="qbtn"
+                >
                   -
                 </button>
+
                 <input
                   type="number"
                   value={cart.quantity[index]}
@@ -97,11 +154,14 @@ function CartShop() {
                   min="1"
                   id="cantidadinput"
                 ></input>
-                <button onClick={() => dispatch(addorremove([add, index]))}>
+                <button
+                  onClick={() => dispatch(addorremove([add, index]))}
+                  className="qbtn"
+                >
                   +
                 </button>
               </div>
-              <div>
+              <div id="totalandremove-box">
                 {precioporcantidad(element, index)}
                 {precioporunidad(element, index)}
                 <button onClick={() => dispatch(cutitem(index))}>
@@ -115,10 +175,10 @@ function CartShop() {
       <div id="total">
         <div>
           Total:
-          {total > 0 ? total : "Please pick a Size for the products in blue"}
+          {calculatetotal()}
         </div>
         <div>Total de items: {cart.id.length}</div>
-        <button id="conf-purch">Comprar</button>
+        {buy()}
       </div>
     </div>
   );

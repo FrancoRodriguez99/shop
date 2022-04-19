@@ -4,13 +4,17 @@
     align-items: center;
     justify-content: center;
     text-align: center;
-    width: 90%;
+    width: 20em;
+    height: 15em;
     border-style: outset;
     margin: 5px;
     margin-top: 2em;
     justify-self: center;
     border-color: cyan;
-    background: rgba(0,251,255,0.30996148459383754);}
+    background: rgba(0,251,255,0.30996148459383754);
+    font-weight: 900;
+    color: white;
+}
 
 
 img{
@@ -30,4 +34,10 @@ img{
 
 .productforsale:hover {
     background-color: rgb(140, 255, 255);
+    color: black
    }
+
+.preciorange{
+    display: flex;
+    flex-direction: column;
+}

@@ -13,6 +13,22 @@ function ItemForSale({ product = {} }) {
     }
   });
 
+  function prices() {
+    return (
+      <div className="preciorange">
+        Precio desde {product.precio[0]}$ hasta{" "}
+        {product.precio[product.precio.length - 1]}$
+        <div>
+          Tamaño: {product.tamanio[0]} -{" "}
+          {product.tamanio[product.tamanio.length - 1]}
+        </div>
+      </div>
+    );
+  }
+  function price() {
+    return <div>{product.precio}$</div>;
+  }
+
   return (
     <button
       className="productforsale"
@@ -24,7 +40,7 @@ function ItemForSale({ product = {} }) {
         <div>
           <p>{product.name}</p>
 
-          <p>{product.precio}</p>
+          <p>{product.precio.length > 1 ? prices() : price()}</p>
         </div>
         <div className="displayonhover">
           <p>{product.description}</p>
