@@ -1,15 +1,25 @@
 {
   "files": {
     "main.css": "/shop/static/css/main.9db75ac9.css",
-    "main.js": "/shop/static/js/main.c7dc3e50.js",
+    "main.js": "/shop/static/js/main.534cc63e.js",
     "static/media/contact.png": "/shop/static/media/contact.66fdd55e182d728d54d2.png",
+    "static/media/papelhigienico.png": "/shop/static/media/papelhigienico.5bb6c0e5432f3adf1efe.png",
     "static/media/objetomuestra3.png": "/shop/static/media/objetomuestra3.54e4c5fab8d975d10ed2.png",
     "static/media/pw.png": "/shop/static/media/pw.6c49dfd2e357d7ef663e.png",
+    "static/media/book.png": "/shop/static/media/book.2db999b8bf8157da3103.png",
     "static/media/objetomuestra.png": "/shop/static/media/objetomuestra.efd91fe4b960dfe97c0a.png",
+    "static/media/ring.png": "/shop/static/media/ring.6e261ff97524972c18b8.png",
+    "static/media/shirt.png": "/shop/static/media/shirt.ea36f6b3544a851a0490.png",
     "static/media/objetomuestra2.png": "/shop/static/media/objetomuestra2.1542f8a62abb0f610e53.png",
+    "static/media/banana.png": "/shop/static/media/banana.796b7172cfcef89e7322.png",
+    "static/media/salchicha.png": "/shop/static/media/salchicha.7b1b7c6ef0fd51b7eb57.png",
+    "static/media/alarma.png": "/shop/static/media/alarma.f38abdd2350e21584aff.png",
+    "static/media/pepsi.png": "/shop/static/media/pepsi.8fce20d002d930d6b8dd.png",
     "static/media/cb.png": "/shop/static/media/cb.d7457337271c8269ffd2.png",
     "static/media/rt.png": "/shop/static/media/rt.ba2157f36b9dca528654.png",
+    "static/media/bowl.png": "/shop/static/media/bowl.329b1457ee2dd8383ec7.png",
     "static/media/shopcart.png": "/shop/static/media/shopcart.ad017ea57369783ee948.png",
+    "static/media/phone.png": "/shop/static/media/phone.54d438cabe6a54f04e5e.png",
     "static/media/hc.ico": "/shop/static/media/hc.f7b3c0457d4d055cd86d.ico",
     "static/media/logo.png": "/shop/static/media/logo.53de10935f4bcd686c1b.png",
     "static/media/pb.ico": "/shop/static/media/pb.97efbde1339df8c276ae.ico",
@@ -29,10 +39,10 @@
     "static/media/manufac.ico": "/shop/static/media/manufac.6796ebc2f51ed87df631.ico",
     "index.html": "/shop/index.html",
     "main.9db75ac9.css.map": "/shop/static/css/main.9db75ac9.css.map",
-    "main.c7dc3e50.js.map": "/shop/static/js/main.c7dc3e50.js.map"
+    "main.534cc63e.js.map": "/shop/static/js/main.534cc63e.js.map"
   },
   "entrypoints": [
     "static/css/main.9db75ac9.css",
-    "static/js/main.c7dc3e50.js"
+    "static/js/main.534cc63e.js"
   ]
 }
