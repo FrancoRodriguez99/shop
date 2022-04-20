@@ -40,7 +40,7 @@ function ItemForSale({ product = {} }) {
         <div>
           <p>{product.name}</p>
 
-          <p>{product.precio.length > 1 ? prices() : price()}</p>
+          {product.precio.length > 1 ? prices() : price()}
         </div>
         <div className="displayonhover">
           <p>{product.description}</p>

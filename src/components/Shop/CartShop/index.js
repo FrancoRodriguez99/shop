@@ -15,6 +15,8 @@ function CartShop() {
   const dispatch = useDispatch();
   const add = "add";
   const rmv = "rmv";
+
+  //conseguir valor del input
   const getvalue = (event, index) => {
     const add = event.target.value;
     if (add < 0) {
@@ -22,12 +24,13 @@ function CartShop() {
       dispatch(changequantity([Math.floor(add), index]));
     }
   };
+  //conseguir valor del select
   const sizevalue = (event, index) => {
     const size = event.target.value;
     dispatch(changesize([size, index]));
   };
   function precioporcantidad(element, index) {
-    if (Array.isArray(element.precio)) {
+    if (element.precio.length > 1) {
       if (cart.tamanio[index] !== undefined) {
         total[index] =
           element.precio[cart.tamanio[index]] * cart.quantity[index];
@@ -40,23 +43,24 @@ function CartShop() {
         return <div>Por favor elige un tamaño!</div>;
       }
     } else {
-      total[index] = element.precio * cart.quantity[index];
-      return <div>{element.precio * cart.quantity[index]} Total</div>;
+      total[index] = element.precio[0] * cart.quantity[index];
+      return <div>{element.precio[0] * cart.quantity[index]} Total</div>;
     }
   }
 
   function precioporunidad(element, index) {
-    if (Array.isArray(element.precio)) {
+    if (element.precio.length > 1) {
       if (cart.tamanio[index] !== undefined) {
         return <div>{element.precio[cart.tamanio[index]]} C/U</div>;
       } else {
         return <div>Por favor, elige un tamaño!</div>;
       }
     } else {
-      return <div>{element.precio} C/U</div>;
+      return <div>{element.precio[0]} C/U</div>;
     }
   }
 
+  //funcion calcula el total y lo pushea a la base de datos si este cambia
   function calculatetotal() {
     if ([...cart.total].toString() !== [...total].toString()) {
       dispatch(changetotal(total));
@@ -69,9 +73,8 @@ function CartShop() {
     return totaldos;
   }
 
+  //Funcion se asegura que el boton se renderize solo si elegiste tamaño en todos los productos
   function buy() {
-    //if size choose render button if not render a alert
-
     let hbtn = true;
     cart.tamanio.forEach((element) => {
       if (element === undefined || element === "Por favor elige un tamaño.") {
@@ -115,7 +118,7 @@ function CartShop() {
                 {element.name}
                 {element.tamanio.length > 1 ? (
                   <select
-                    selected="Pelase Pick a Size"
+                    selected={cart.tamanio[index]}
                     className={
                       cart.tamanio[index] === undefined ||
                       cart.tamanio[index] === "Por favor elige un tamaño."
